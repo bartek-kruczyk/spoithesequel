@@ -54,7 +54,15 @@
     <Content Include="Admin\AddNewProblem.aspx" />
     <Content Include="Admin\AddStudentAccount.aspx" />
     <Content Include="App_Themes\Default\images\ajax-loader.gif" />
+    <Content Include="css\style.css" />
     <Content Include="Default.aspx" />
+    <Content Include="images\img01.jpg" />
+    <Content Include="images\img02.jpg" />
+    <Content Include="images\img03.jpg" />
+    <Content Include="images\img04.jpg" />
+    <Content Include="images\img05.jpg" />
+    <Content Include="images\img06.jpg" />
+    <Content Include="images\img07.jpg" />
     <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
     <Content Include="Scripts\jquery-1.4.1.js" />
     <Content Include="Scripts\jquery-1.4.1.min.js" />

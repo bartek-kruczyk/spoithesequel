@@ -1,5 +1,9 @@
 ﻿<%@ Page Title="Add new problem" Language="C#" MasterPageFile="~/Admin/Admin.Master" AutoEventWireup="true" CodeBehind="AddNewProblem.aspx.cs" Inherits="spoithesequel.Admin.AddNewProblem" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <link href="../css/style.css" rel="stylesheet" type="text/css" media="screen" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder" runat="server">
     <h2>Add new problem</h2>
