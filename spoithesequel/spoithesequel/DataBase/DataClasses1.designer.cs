@@ -63,6 +63,9 @@ namespace spoithesequel.DataBase
     partial void Insertaspnet_UsersInRole(aspnet_UsersInRole instance);
     partial void Updateaspnet_UsersInRole(aspnet_UsersInRole instance);
     partial void Deleteaspnet_UsersInRole(aspnet_UsersInRole instance);
+    partial void InsertProblem(Problem instance);
+    partial void UpdateProblem(Problem instance);
+    partial void DeleteProblem(Problem instance);
     #endregion
 		
 		public DataClasses1DataContext() : 
@@ -180,6 +183,14 @@ namespace spoithesequel.DataBase
 			get
 			{
 				return this.GetTable<aspnet_UsersInRole>();
+			}
+		}
+		
+		public System.Data.Linq.Table<Problem> Problems
+		{
+			get
+			{
+				return this.GetTable<Problem>();
 			}
 		}
 	}
@@ -3124,6 +3135,380 @@ namespace spoithesequel.DataBase
 						this._UserId = default(System.Guid);
 					}
 					this.SendPropertyChanged("aspnet_User");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Problems")]
+	public partial class Problem : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private long _Id;
+		
+		private string _Title;
+		
+		private string _ProblemsCode;
+		
+		private string _Languages;
+		
+		private string _DifficultyLevel;
+		
+		private string _Description;
+		
+		private System.Nullable<System.DateTime> _OpeningDate;
+		
+		private System.Nullable<System.DateTime> _ClosingDate;
+		
+		private System.Nullable<long> _TimeLimit;
+		
+		private System.Nullable<long> _SizeLimit;
+		
+		private string _AddedBy;
+		
+		private System.Nullable<System.DateTime> _AddingDate;
+		
+		private string _Input;
+		
+		private string _Output;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnIdChanging(long value);
+    partial void OnIdChanged();
+    partial void OnTitleChanging(string value);
+    partial void OnTitleChanged();
+    partial void OnProblemsCodeChanging(string value);
+    partial void OnProblemsCodeChanged();
+    partial void OnLanguagesChanging(string value);
+    partial void OnLanguagesChanged();
+    partial void OnDifficultyLevelChanging(string value);
+    partial void OnDifficultyLevelChanged();
+    partial void OnDescriptionChanging(string value);
+    partial void OnDescriptionChanged();
+    partial void OnOpeningDateChanging(System.Nullable<System.DateTime> value);
+    partial void OnOpeningDateChanged();
+    partial void OnClosingDateChanging(System.Nullable<System.DateTime> value);
+    partial void OnClosingDateChanged();
+    partial void OnTimeLimitChanging(System.Nullable<long> value);
+    partial void OnTimeLimitChanged();
+    partial void OnSizeLimitChanging(System.Nullable<long> value);
+    partial void OnSizeLimitChanged();
+    partial void OnAddedByChanging(string value);
+    partial void OnAddedByChanged();
+    partial void OnAddingDateChanging(System.Nullable<System.DateTime> value);
+    partial void OnAddingDateChanged();
+    partial void OnInputChanging(string value);
+    partial void OnInputChanged();
+    partial void OnOutputChanging(string value);
+    partial void OnOutputChanged();
+    #endregion
+		
+		public Problem()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id", AutoSync=AutoSync.OnInsert, DbType="BigInt NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public long Id
+		{
+			get
+			{
+				return this._Id;
+			}
+			set
+			{
+				if ((this._Id != value))
+				{
+					this.OnIdChanging(value);
+					this.SendPropertyChanging();
+					this._Id = value;
+					this.SendPropertyChanged("Id");
+					this.OnIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Title", DbType="VarChar(MAX)")]
+		public string Title
+		{
+			get
+			{
+				return this._Title;
+			}
+			set
+			{
+				if ((this._Title != value))
+				{
+					this.OnTitleChanging(value);
+					this.SendPropertyChanging();
+					this._Title = value;
+					this.SendPropertyChanged("Title");
+					this.OnTitleChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ProblemsCode", DbType="VarChar(50)")]
+		public string ProblemsCode
+		{
+			get
+			{
+				return this._ProblemsCode;
+			}
+			set
+			{
+				if ((this._ProblemsCode != value))
+				{
+					this.OnProblemsCodeChanging(value);
+					this.SendPropertyChanging();
+					this._ProblemsCode = value;
+					this.SendPropertyChanged("ProblemsCode");
+					this.OnProblemsCodeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Languages", DbType="VarChar(MAX)")]
+		public string Languages
+		{
+			get
+			{
+				return this._Languages;
+			}
+			set
+			{
+				if ((this._Languages != value))
+				{
+					this.OnLanguagesChanging(value);
+					this.SendPropertyChanging();
+					this._Languages = value;
+					this.SendPropertyChanged("Languages");
+					this.OnLanguagesChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DifficultyLevel", DbType="VarChar(50)")]
+		public string DifficultyLevel
+		{
+			get
+			{
+				return this._DifficultyLevel;
+			}
+			set
+			{
+				if ((this._DifficultyLevel != value))
+				{
+					this.OnDifficultyLevelChanging(value);
+					this.SendPropertyChanging();
+					this._DifficultyLevel = value;
+					this.SendPropertyChanged("DifficultyLevel");
+					this.OnDifficultyLevelChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Description", DbType="Text", UpdateCheck=UpdateCheck.Never)]
+		public string Description
+		{
+			get
+			{
+				return this._Description;
+			}
+			set
+			{
+				if ((this._Description != value))
+				{
+					this.OnDescriptionChanging(value);
+					this.SendPropertyChanging();
+					this._Description = value;
+					this.SendPropertyChanged("Description");
+					this.OnDescriptionChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_OpeningDate", DbType="DateTime")]
+		public System.Nullable<System.DateTime> OpeningDate
+		{
+			get
+			{
+				return this._OpeningDate;
+			}
+			set
+			{
+				if ((this._OpeningDate != value))
+				{
+					this.OnOpeningDateChanging(value);
+					this.SendPropertyChanging();
+					this._OpeningDate = value;
+					this.SendPropertyChanged("OpeningDate");
+					this.OnOpeningDateChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ClosingDate", DbType="DateTime")]
+		public System.Nullable<System.DateTime> ClosingDate
+		{
+			get
+			{
+				return this._ClosingDate;
+			}
+			set
+			{
+				if ((this._ClosingDate != value))
+				{
+					this.OnClosingDateChanging(value);
+					this.SendPropertyChanging();
+					this._ClosingDate = value;
+					this.SendPropertyChanged("ClosingDate");
+					this.OnClosingDateChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TimeLimit", DbType="BigInt")]
+		public System.Nullable<long> TimeLimit
+		{
+			get
+			{
+				return this._TimeLimit;
+			}
+			set
+			{
+				if ((this._TimeLimit != value))
+				{
+					this.OnTimeLimitChanging(value);
+					this.SendPropertyChanging();
+					this._TimeLimit = value;
+					this.SendPropertyChanged("TimeLimit");
+					this.OnTimeLimitChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SizeLimit", DbType="BigInt")]
+		public System.Nullable<long> SizeLimit
+		{
+			get
+			{
+				return this._SizeLimit;
+			}
+			set
+			{
+				if ((this._SizeLimit != value))
+				{
+					this.OnSizeLimitChanging(value);
+					this.SendPropertyChanging();
+					this._SizeLimit = value;
+					this.SendPropertyChanged("SizeLimit");
+					this.OnSizeLimitChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AddedBy", DbType="VarChar(50)")]
+		public string AddedBy
+		{
+			get
+			{
+				return this._AddedBy;
+			}
+			set
+			{
+				if ((this._AddedBy != value))
+				{
+					this.OnAddedByChanging(value);
+					this.SendPropertyChanging();
+					this._AddedBy = value;
+					this.SendPropertyChanged("AddedBy");
+					this.OnAddedByChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AddingDate", DbType="DateTime")]
+		public System.Nullable<System.DateTime> AddingDate
+		{
+			get
+			{
+				return this._AddingDate;
+			}
+			set
+			{
+				if ((this._AddingDate != value))
+				{
+					this.OnAddingDateChanging(value);
+					this.SendPropertyChanging();
+					this._AddingDate = value;
+					this.SendPropertyChanged("AddingDate");
+					this.OnAddingDateChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Input", DbType="Text", UpdateCheck=UpdateCheck.Never)]
+		public string Input
+		{
+			get
+			{
+				return this._Input;
+			}
+			set
+			{
+				if ((this._Input != value))
+				{
+					this.OnInputChanging(value);
+					this.SendPropertyChanging();
+					this._Input = value;
+					this.SendPropertyChanged("Input");
+					this.OnInputChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Output", DbType="Text", UpdateCheck=UpdateCheck.Never)]
+		public string Output
+		{
+			get
+			{
+				return this._Output;
+			}
+			set
+			{
+				if ((this._Output != value))
+				{
+					this.OnOutputChanging(value);
+					this.SendPropertyChanging();
+					this._Output = value;
+					this.SendPropertyChanged("Output");
+					this.OnOutputChanged();
 				}
 			}
 		}

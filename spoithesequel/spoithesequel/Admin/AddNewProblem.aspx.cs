@@ -22,9 +22,9 @@ namespace spoithesequel.Admin
                 if (Page.IsValid)
                 {
 
-                    var db = new linqDataContext();
+                    var db = new DataBase.DataClasses1DataContext();
 
-                    Problem NewProblem = new Problem();
+                    DataBase.Problem NewProblem = new DataBase.Problem();
 
                     NewProblem.Title = ProblemsTitle.Text;
                     NewProblem.ProblemsCode = ProblemsCode.Text;

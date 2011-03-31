@@ -140,4 +140,22 @@
       <Association Name="aspnet_User_aspnet_UsersInRole" Member="aspnet_User" ThisKey="UserId" OtherKey="UserId" Type="aspnet_User" IsForeignKey="true" />
     </Type>
   </Table>
+  <Table Name="dbo.Problems" Member="Problems">
+    <Type Name="Problem">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="ProblemsCode" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Languages" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="DifficultyLevel" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="OpeningDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ClosingDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="TimeLimit" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="SizeLimit" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="AddedBy" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="AddingDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Input" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Output" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+    </Type>
+  </Table>
 </Database>

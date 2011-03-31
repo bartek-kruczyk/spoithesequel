@@ -8,7 +8,9 @@
 </head>
 <body>
     <form id="form1" runat="server">
-    <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+    <a href="Admin/AddNewProblem.aspx">Admin/AddNewProblem.aspx</a><br />
+    <a href="Admin/AddStudentAccount.aspx">Admin/AddStudentAccount.aspx</a><br />
+    <a href="User/LoginUser.aspx">User/LoginUser.aspx</a>
     </form>
 </body>
 </html>
