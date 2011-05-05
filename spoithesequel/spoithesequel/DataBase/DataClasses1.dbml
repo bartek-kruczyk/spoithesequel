@@ -143,19 +143,26 @@
   <Table Name="dbo.Problems" Member="Problems">
     <Type Name="Problem">
       <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="Title" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
-      <Column Name="ProblemsCode" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-      <Column Name="Languages" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
-      <Column Name="DifficultyLevel" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-      <Column Name="Description" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
-      <Column Name="OpeningDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Column Name="ClosingDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Column Name="TimeLimit" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
-      <Column Name="SizeLimit" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
-      <Column Name="AddedBy" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-      <Column Name="AddingDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Column Name="Input" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
-      <Column Name="Output" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Title" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="ProblemsCode" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Groups" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Languages" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="DifficultyLevel" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="OpeningDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ClosingDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="TimeLimit" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="SizeLimit" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="AddedBy" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="AddingDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Input" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="Output" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Groups" Member="Groups">
+    <Type Name="Group">
+      <Column Name="IdGroup" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(150) NOT NULL" CanBeNull="false" />
     </Type>
   </Table>
 </Database>

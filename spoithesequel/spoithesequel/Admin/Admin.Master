@@ -17,6 +17,7 @@ Released   : 20100121
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+    <link href="../App_Themes/Default/css/style.css" rel="stylesheet" type="text/css" media="screen" />
     <asp:ContentPlaceHolder ID="head" runat="server">
 
     </asp:ContentPlaceHolder>

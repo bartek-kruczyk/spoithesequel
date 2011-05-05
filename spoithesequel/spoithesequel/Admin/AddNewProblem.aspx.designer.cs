@@ -58,6 +58,15 @@ namespace spoithesequel.Admin {
         protected global::System.Web.UI.WebControls.CheckBoxList Languages;
         
         /// <summary>
+        /// Groups control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBoxList Groups;
+        
+        /// <summary>
         /// TimeLimit control.
         /// </summary>
         /// <remarks>
@@ -94,58 +103,94 @@ namespace spoithesequel.Admin {
         protected global::System.Web.UI.WebControls.RegularExpressionValidator SizeLimitValidator;
         
         /// <summary>
-        /// Description control.
+        /// Editor control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Description;
+        protected global::AjaxControlToolkit.HTMLEditor.Editor Editor;
         
         /// <summary>
-        /// DescriptionRequiredFieldValidator control.
+        /// Input1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator DescriptionRequiredFieldValidator;
+        protected global::System.Web.UI.WebControls.TextBox Input1;
         
         /// <summary>
-        /// Input control.
+        /// Output1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Input;
+        protected global::System.Web.UI.WebControls.TextBox Output1;
         
         /// <summary>
-        /// InputRequiredFieldValidator control.
+        /// Input2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator InputRequiredFieldValidator;
+        protected global::System.Web.UI.WebControls.TextBox Input2;
         
         /// <summary>
-        /// Output control.
+        /// Output2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Output;
+        protected global::System.Web.UI.WebControls.TextBox Output2;
         
         /// <summary>
-        /// OutputRequiredFieldValidator control.
+        /// Input3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator OutputRequiredFieldValidator;
+        protected global::System.Web.UI.WebControls.TextBox Input3;
+        
+        /// <summary>
+        /// Output3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox Output3;
+        
+        /// <summary>
+        /// AsyncFileUpload control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AjaxControlToolkit.AsyncFileUpload AsyncFileUpload;
+        
+        /// <summary>
+        /// UpdateProgress control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.UpdateProgress UpdateProgress;
+        
+        /// <summary>
+        /// UploadFileInfoLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label UploadFileInfoLabel;
         
         /// <summary>
         /// OpeningDate control.
@@ -154,7 +199,25 @@ namespace spoithesequel.Admin {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Calendar OpeningDate;
+        protected global::System.Web.UI.WebControls.TextBox OpeningDate;
+        
+        /// <summary>
+        /// CalendarExtender1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AjaxControlToolkit.CalendarExtender CalendarExtender1;
+        
+        /// <summary>
+        /// OpeningTime control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::MKB.TimePicker.TimeSelector OpeningTime;
         
         /// <summary>
         /// ClosingDate control.
@@ -163,7 +226,25 @@ namespace spoithesequel.Admin {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Calendar ClosingDate;
+        protected global::System.Web.UI.WebControls.TextBox ClosingDate;
+        
+        /// <summary>
+        /// CalendarExtender2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AjaxControlToolkit.CalendarExtender CalendarExtender2;
+        
+        /// <summary>
+        /// ClosingTime control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::MKB.TimePicker.TimeSelector ClosingTime;
         
         /// <summary>
         /// AddProblem control.
