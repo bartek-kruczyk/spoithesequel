@@ -12,7 +12,8 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>spoithesequel</RootNamespace>
     <AssemblyName>spoithesequel</AssemblyName>
-    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -37,11 +38,12 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.Extensions" />
-    <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
     <Reference Include="System.Xml" />
@@ -49,15 +51,28 @@
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
     <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="TimePicker, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d25e9f59e49c4d2f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Admin\AddNewProblem.aspx" />
     <Content Include="Admin\AddStudentAccount.aspx" />
+    <Content Include="Admin\EditProblem.aspx" />
     <Content Include="App_Themes\Default\images\ajax-loader.gif" />
+    <Content Include="App_Themes\Default\css\style.css" />
     <Content Include="Default.aspx" />
+    <Content Include="App_Themes\Default\images\img01.jpg" />
+    <Content Include="App_Themes\Default\images\img02.jpg" />
+    <Content Include="App_Themes\Default\images\img03.jpg" />
+    <Content Include="App_Themes\Default\images\img04.jpg" />
+    <Content Include="App_Themes\Default\images\img05.jpg" />
+    <Content Include="App_Themes\Default\images\img06.jpg" />
+    <Content Include="App_Themes\Default\images\img07.jpg" />
     <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
     <Content Include="Scripts\jquery-1.4.1.js" />
     <Content Include="Scripts\jquery-1.4.1.min.js" />
-    <Content Include="App_Themes\Default\StyleSheet.css" />
     <Content Include="User\LoginUser.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -70,6 +85,13 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin\AddNewProblem.aspx.cs">
+      <DependentUpon>AddNewProblem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AddNewProblem.aspx.designer.cs">
+      <DependentUpon>AddNewProblem.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Admin\AddStudentAccount.aspx.cs">
       <DependentUpon>AddStudentAccount.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -84,10 +106,17 @@
     <Compile Include="Admin\Admin.Master.designer.cs">
       <DependentUpon>Admin.Master</DependentUpon>
     </Compile>
+    <Compile Include="Admin\EditProblem.aspx.cs">
+      <DependentUpon>EditProblem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\EditProblem.aspx.designer.cs">
+      <DependentUpon>EditProblem.aspx</DependentUpon>
+    </Compile>
     <Compile Include="DataBase\DataClasses1.designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
       <DependentUpon>DataClasses1.dbml</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
     </Compile>
     <Compile Include="Default.aspx.cs">
       <SubType>ASPXCodeBehind</SubType>
@@ -122,16 +151,14 @@
     <Content Include="User\User.Master" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="DataBase\DataClasses1.dbml">
-      <Generator>MSLinqToSQLGenerator</Generator>
-      <LastGenOutput>DataClasses1.designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="DataBase\DataClasses1.dbml">
+      <SubType>Designer</SubType>
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>DataClasses1.designer.cs</LastGenOutput>
+    </None>
     <None Include="DataBase\DataClasses1.dbml.layout">
       <DependentUpon>DataClasses1.dbml</DependentUpon>
     </None>

@@ -11,7 +11,7 @@ namespace spoithesequel
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            Label1.Text = User.Identity.Name.ToString();
+
         }
     }
 }
