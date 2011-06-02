@@ -1,6 +1,7 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AddStudentAccount.aspx.cs" Inherits="spoithesequel.AddStudentAccount" MasterPageFile="~/Admin/Admin.Master" %>
 
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
     <meta name="keywords" content="" />
     <meta name="description" content="" />
