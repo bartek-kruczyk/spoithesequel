@@ -1,111 +1,179 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="User.master.cs" Inherits="spoithesequel.User.User" %>
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<!--
-Design by Free CSS Templates
-http://www.freecsstemplates.org
-Released for free under a Creative Commons Attribution 2.5 License
-
-Name       : Indicator  
-Description: A two-column, fixed-width design with dark color scheme.
-Version    : 1.0
-Released   : 20100121
-
--->
-<html xmlns="http://www.w3.org/1999/xhtml">
-
-<head runat="server">
-    <title></title>
-    <link href="../App_Themes/Default/css/style.css" rel="stylesheet" type="text/css" media="screen" />
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title></title>
+<link href="../App_Themes/Default/css/default.css" rel="stylesheet" type="text/css" media="screen" />
     <asp:ContentPlaceHolder ID="head" runat="server">
-    </asp:ContentPlaceHolder>
-</head>
 
-<body>
-<div id="wrapper">
-	<div id="header-wrapper">
-	<div id="header">
-		<div id="logo">
-			<h1><a href="#">spoj the sequel   </a></h1>
-			<p>marny klon spoja</p>
-		</div>
-	</div>
-	</div>
-	<!-- end #header -->
-	<div id="page">
-	<div id="page-bgtop">
-	<div id="page-bgbtm">
-		<div id="content">
-            <form id="form1" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+<div id="wrapper">
+<!-- start header -->
+<div id="header">
+	<div id="menu">
+		<ul id="main">
+			<li class="current_page_item"><a href="../default.aspx">Homepage</a></li>
+			
+			<li><a href="#">Contact Us</a></li>
+		</ul>
+	</div>
+	<div id="logo">
+		<h1><a href="#"><span>Spoj the sequel</span></a></h1>
+	
+	</div>
+</div>
+<!-- end header -->
+	<!-- start page -->
+	<div id="page">
+		<div id="sidebar1" class="sidebar">
+			<ul>
+				<li>
+					<h2>Logowanie</h2>
+					<ul>
+						<li><a href="#">Zaloguj</a></li>
+						<li><a href="#">Zrejestruj</a></li>
+					
+					</ul>
+				</li>
+				<li>
+					<h2>Zadania</h2>
+					<ul>
+					<li><a href="#">Przykłady</a></li>
+                    <li><a href="#">Łatwe</a></li>
+                    <li><a href="#">Średnie</a></li>
+                    <li><a href="#">Trudne</a></li>
+					</ul>
+				</li>
+				<li>
+					<h2>Ranking</h2>
+					<ul>
+						<li><a href="#">Użytkownicy</a></li>
+						<li><a href="#">Grupy</a></li>
+						<li><a href="#">Języki</a></li>
+						
+					</ul>
+				</li>
+				<li>
+					
+				</li>
+			</ul>
+		</div>
+		<!-- start content -->
+		<div id="content">            <form id="form1" runat="server">
                 <div>
+                    <asp:ToolkitScriptManager ID="ToolkitScriptManager" runat="server">
+                    </asp:ToolkitScriptManager>
+
                     <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-        
+            
                     </asp:ContentPlaceHolder>
                 </div>
             </form>
-		<div style="clear: both;">&nbsp;</div>
-		</div>
-		<!-- end #content -->
-		<div id="sidebar">
-			<ul>
-				<li>
-					<div id="search" >
-					<form method="get" action="#">
-						<div>
-							<input type="text" name="s" id="search-text" value="" />
-							<input type="submit" id="search-submit" value="Szukaj" />
-						</div>
-					</form>
-					</div>
-					<div style="clear: both;">&nbsp;</div>
-				</li>
-				<li>
-					<h2>Logowanie</h2>
-					<ul>
-                    	<li><a href="#">Zaloguj</a></li>
-						<li><a href="#">Zarejestruj</a></li>
-					</ul>
-				</li>
-				<li>
-					<h2>Zadania</h2>
-					<ul>
-                    	<li><a href="#">Przykłady</a></li>
-						<li><a href="#">Łatwe</a></li>
-						<li><a href="#">Średnie</a></li>
-						<li><a href="#">Trudne</a></li>
-					</ul>
-				</li>
-				<li>
-					<h2>Ranking</h2>
-					<ul>
-						<li><a href="#">Użytkownicy</a></li>
-						<li><a href="#">Grupy</a></li>
-						<li><a href="#">Języki</a></li>
-					</ul>
-				</li>
-				<li>
-					<h2>Archives</h2>
-					<ul>
-						<li><a href="#">Aliquam libero</a></li>
-						<li><a href="#">Consectetuer adipiscing elit</a></li>
-						<li><a href="#">Metus aliquam pellentesque</a></li>
-						<li><a href="#">Suspendisse iaculis mauris</a></li>
-						<li><a href="#">Urnanet non molestie semper</a></li>
-						<li><a href="#">Proin gravida orci porttitor</a></li>
-					</ul>
-				</li>
-			</ul>
-		</div>
-		<!-- end #sidebar -->
-		<div style="clear: both;">&nbsp;</div>
-	</div>
-	</div>
-	</div>
-	<!-- end #page -->
-</div>
-	<div id="footer">
-		<p>Copyright (c) 2008 SpojTheSequel.com. All rights reserved. Design by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.</p>
-	</div>
-	<!-- end #footer -->
-</body>
-</html>
+		</div>
+		<!-- end content -->
+		<!-- start sidebars -->
+		<div id="sidebar2" class="sidebar">
+			<ul>
+				<li>
+					<form id="searchform" method="get" action="#">
+						<div>
+							<h2>Site Search</h2>
+							<input type="text" name="s" id="s" size="15" value="" />
+						</div>
+					</form>
+				</li>
+				<li>
+					<h2>Tags</h2>
+					<p class="tag"><a href="#">dolor</a> <a href="#">ipsum</a> <a href="#">lorem</a> <a href="#">sit amet</a> <a href="#">dolor</a> <a href="#">ipsum</a> <a href="#">lorem</a> <a href="#">sit amet</a></p></li>
+				<li>
+					<h2>Calendar</h2>
+					<div id="calendar_wrap">
+						<table summary="Calendar">
+							<caption>
+							May 2011
+							</caption>
+							<thead>
+								<tr>
+									<th abbr="Monday" scope="col" title="Monday">M</th>
+									<th abbr="Tuesday" scope="col" title="Tuesday">T</th>
+									<th abbr="Wednesday" scope="col" title="Wednesday">W</th>
+									<th abbr="Thursday" scope="col" title="Thursday">T</th>
+									<th abbr="Friday" scope="col" title="Friday">F</th>
+									<th abbr="Saturday" scope="col" title="Saturday">S</th>
+									<th abbr="Sunday" scope="col" title="Sunday">S</th>
+								</tr>
+							</thead>
+							<tfoot>
+								<tr>
+									<td abbr="September" colspan="3" id="prev"><a href="#" title="View posts for September 2009">&laquo; Sep</a></td>
+									<td class="pad">&nbsp;</td>
+									<td colspan="3" id="next">&nbsp;</td>
+								</tr>
+							</tfoot>
+							<tbody>
+								<tr>
+									<td>1</td>
+									<td>2</td>
+									<td>3</td>
+									<td id="today">4</td>
+									<td>5</td>
+									<td>6</td>
+									<td>7</td>
+								</tr>
+								<tr>
+									<td>8</td>
+									<td>9</td>
+									<td>10</td>
+									<td>11</td>
+									<td>12</td>
+									<td>13</td>
+									<td>14</td>
+								</tr>
+								<tr>
+									<td>15</td>
+									<td>16</td>
+									<td>17</td>
+									<td>18</td>
+									<td>19</td>
+									<td>20</td>
+									<td>21</td>
+								</tr>
+								<tr>
+									<td>22</td>
+									<td>23</td>
+									<td>24</td>
+									<td>25</td>
+									<td>26</td>
+									<td>27</td>
+									<td>28</td>
+								</tr>
+								<tr>
+									<td>29</td>
+									<td>30</td>
+									<td>31</td>
+									<td class="pad" colspan="4">&nbsp;</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</li>
+				<li>
+					
+				</li>
+			</ul>
+		</div>
+		<!-- end sidebars -->
+		<div style="clear: both;">&nbsp;</div>
+	</div>
+	<!-- end page -->
+</div>
+<div id="footer">
+	<p class="copyright">&copy;&nbsp;&nbsp;2011 All Rights Reserved &nbsp;&bull;&nbsp; Design by DeS.</p>
+</div>
+</body>
+</html>

@@ -60,16 +60,11 @@
     <Content Include="Admin\AddNewProblem.aspx" />
     <Content Include="Admin\AddStudentAccount.aspx" />
     <Content Include="Admin\EditProblem.aspx" />
-    <Content Include="App_Themes\Default\images\ajax-loader.gif" />
-    <Content Include="App_Themes\Default\css\style.css" />
-    <Content Include="Default.aspx" />
+    <Content Include="App_Themes\Default\css\default.css" />
     <Content Include="App_Themes\Default\images\img01.jpg" />
     <Content Include="App_Themes\Default\images\img02.jpg" />
     <Content Include="App_Themes\Default\images\img03.jpg" />
-    <Content Include="App_Themes\Default\images\img04.jpg" />
-    <Content Include="App_Themes\Default\images\img05.jpg" />
-    <Content Include="App_Themes\Default\images\img06.jpg" />
-    <Content Include="App_Themes\Default\images\img07.jpg" />
+    <Content Include="Default.aspx" />
     <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
     <Content Include="Scripts\jquery-1.4.1.js" />
     <Content Include="Scripts\jquery-1.4.1.min.js" />
@@ -171,7 +166,7 @@
         <WebProjectProperties>
           <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>49512</DevelopmentServerPort>
+          <DevelopmentServerPort>50947</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>
           </IISUrl>
