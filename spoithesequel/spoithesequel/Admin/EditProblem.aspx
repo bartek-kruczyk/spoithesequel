@@ -1,29 +1,29 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin/Admin.Master" AutoEventWireup="true" CodeBehind="EditProblem.aspx.cs" Inherits="spoithesequel.Admin.EditProblem" %>
-
-<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit.HTMLEditor"
-    TagPrefix="cc1" %>
-
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin/Admin.Master" AutoEventWireup="true" CodeBehind="EditProblem.aspx.cs" Inherits="spoithesequel.Admin.EditProblemTemp" %>
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit.HTMLEditor" TagPrefix="cc1" %>
 <%@ Register Assembly="TimePicker" Namespace="MKB.TimePicker" TagPrefix="MKB" %>
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <meta name="keywords" content="" />
     <meta name="description" content="" />
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 </asp:Content>
+
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder" runat="server">
-    <h2>Edytuj problem</h2>
+    <asp:MultiView ID="MultiView1" runat="server">
+        <asp:View ID="Form" runat="server">
     
+    <h2><asp:Label ID="FormType" runat="server" Text="Edytuj problem"></asp:Label></h2>
+
     <h4>Tytuł</h4>
     <asp:TextBox ID="ProblemsTitle" Width="300px" runat="server"></asp:TextBox>
     <asp:RequiredFieldValidator ID="ProblemsTitleRequiredFieldValidator" runat="server" ErrorMessage="Field required" ControlToValidate="ProblemsTitle"></asp:RequiredFieldValidator>
     
     <br />
-    <br />
 
     <h4>Kod problemu</h4>
     <asp:TextBox ID="ProblemsCode" runat="server"></asp:TextBox>
 
-    <br />
     <br />
 
     <h4>Poziom trudności</h4>
@@ -38,13 +38,8 @@
     
     <h4>Dozwolone języki</h4>
     <asp:CheckBoxList ID="Languages" runat="server">
-        <asp:ListItem>ANSI C</asp:ListItem>
-        <asp:ListItem>C++</asp:ListItem>
-        <asp:ListItem>C#</asp:ListItem>
     </asp:CheckBoxList>
     
-    <br />
-
     <h4>Grupy</h4>
     
     <asp:CheckBoxList ID="Groups" runat="server">
@@ -63,61 +58,194 @@
     <cc1:Editor ID="Editor" runat="server" />
     <br />
     <br />
-    <h4>Obecne pary wej/wyj</h4>
-    
 
-    <asp:Table ID="InOut" runat="server">
-        <asp:TableHeaderRow>
+    <h4>Pary wejście - wyjście</h4>
+            
+
+
+           
+            
+            <asp:UpdatePanel ID="UpdatePanel1" UpdateMode="Conditional" runat="server">
+            <ContentTemplate>
+            <asp:Table ID="InOut" runat="server">
+            <asp:TableHeaderRow>
             <asp:TableHeaderCell></asp:TableHeaderCell>
             <asp:TableHeaderCell></asp:TableHeaderCell>
             <asp:TableHeaderCell></asp:TableHeaderCell>
-            <asp:TableHeaderCell></asp:TableHeaderCell>
-        </asp:TableHeaderRow>
-    </asp:Table>
+            </asp:TableHeaderRow>
+            <asp:TableRow>
+            <asp:TableCell></asp:TableCell>
+            <asp:TableCell>
+                <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox></asp:TableCell>
+            <asp:TableCell>
+                <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox></asp:TableCell>
+            </asp:TableRow>
+            <asp:TableRow>
+            <asp:TableCell></asp:TableCell>
+            <asp:TableCell>
+                <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox></asp:TableCell>
+            <asp:TableCell>
+                <asp:TextBox ID="TextBox4" runat="server"></asp:TextBox></asp:TableCell>
+            </asp:TableRow>
+            <asp:TableRow>
+            <asp:TableCell></asp:TableCell>
+            <asp:TableCell>
+                <asp:TextBox ID="TextBox5" runat="server"></asp:TextBox></asp:TableCell>
+            <asp:TableCell>
+                <asp:TextBox ID="TextBox6" runat="server"></asp:TextBox></asp:TableCell>
+            </asp:TableRow>
+            <asp:TableRow>
+            <asp:TableCell></asp:TableCell>
+            <asp:TableCell>
+                <asp:TextBox ID="TextBox7" runat="server"></asp:TextBox></asp:TableCell>
+            <asp:TableCell>
+                <asp:TextBox ID="TextBox8" runat="server"></asp:TextBox></asp:TableCell>
+            </asp:TableRow>
+            <asp:TableRow>
+            <asp:TableCell></asp:TableCell>
+            <asp:TableCell>
+                <asp:TextBox ID="TextBox9" runat="server"></asp:TextBox></asp:TableCell>
+            <asp:TableCell>
+                <asp:TextBox ID="TextBox10" runat="server"></asp:TextBox></asp:TableCell>
+            </asp:TableRow>
+            <asp:TableRow Visible="false">
+            <asp:TableCell></asp:TableCell>
+            <asp:TableCell>
+                <asp:TextBox ID="TextBox11" runat="server"></asp:TextBox></asp:TableCell>
+            <asp:TableCell>
+                <asp:TextBox ID="TextBox12" runat="server"></asp:TextBox></asp:TableCell>
+            </asp:TableRow>
+            <asp:TableRow Visible="false">
+            <asp:TableCell></asp:TableCell>
+            <asp:TableCell>
+                <asp:TextBox ID="TextBox13" runat="server"></asp:TextBox></asp:TableCell>
+            <asp:TableCell>
+                <asp:TextBox ID="TextBox14" runat="server"></asp:TextBox></asp:TableCell>
+            </asp:TableRow>
+            <asp:TableRow Visible="false">
+            <asp:TableCell></asp:TableCell>
+            <asp:TableCell>
+                <asp:TextBox ID="TextBox15" runat="server"></asp:TextBox></asp:TableCell>
+            <asp:TableCell>
+                <asp:TextBox ID="TextBox16" runat="server"></asp:TextBox></asp:TableCell>
+            </asp:TableRow>
+            <asp:TableRow Visible="false">
+            <asp:TableCell></asp:TableCell>
+            <asp:TableCell>
+                <asp:TextBox ID="TextBox17" runat="server"></asp:TextBox></asp:TableCell>
+            <asp:TableCell>
+                <asp:TextBox ID="TextBox18" runat="server"></asp:TextBox></asp:TableCell>
+            </asp:TableRow>
+            <asp:TableRow Visible="false">
+            <asp:TableCell></asp:TableCell>
+            <asp:TableCell>
+                <asp:TextBox ID="TextBox19" runat="server"></asp:TextBox></asp:TableCell>
+            <asp:TableCell>
+                <asp:TextBox ID="TextBox20" runat="server"></asp:TextBox></asp:TableCell>
+            </asp:TableRow>
+            <asp:TableRow Visible="false">
+            <asp:TableCell></asp:TableCell>
+            <asp:TableCell>
+                <asp:TextBox ID="TextBox21" runat="server"></asp:TextBox></asp:TableCell>
+            <asp:TableCell>
+                <asp:TextBox ID="TextBox22" runat="server"></asp:TextBox></asp:TableCell>
+            </asp:TableRow>
+            <asp:TableRow Visible="false">
+            <asp:TableCell></asp:TableCell>
+            <asp:TableCell>
+                <asp:TextBox ID="TextBox23" runat="server"></asp:TextBox></asp:TableCell>
+            <asp:TableCell>
+                <asp:TextBox ID="TextBox24" runat="server"></asp:TextBox></asp:TableCell>
+            </asp:TableRow>
+            <asp:TableRow Visible="false">
+            <asp:TableCell></asp:TableCell>
+            <asp:TableCell>
+                <asp:TextBox ID="TextBox25" runat="server"></asp:TextBox></asp:TableCell>
+            <asp:TableCell>
+                <asp:TextBox ID="TextBox26" runat="server"></asp:TextBox></asp:TableCell>
+            </asp:TableRow>
+            <asp:TableRow Visible="false">
+            <asp:TableCell></asp:TableCell>
+            <asp:TableCell>
+                <asp:TextBox ID="TextBox27" runat="server"></asp:TextBox></asp:TableCell>
+            <asp:TableCell>
+                <asp:TextBox ID="TextBox28" runat="server"></asp:TextBox></asp:TableCell>
+            </asp:TableRow>
+            <asp:TableRow Visible="false">
+            <asp:TableCell></asp:TableCell>
+            <asp:TableCell>
+                <asp:TextBox ID="TextBox29" runat="server"></asp:TextBox></asp:TableCell>
+            <asp:TableCell>
+                <asp:TextBox ID="TextBox30" runat="server"></asp:TextBox></asp:TableCell>
+            </asp:TableRow>
+            <asp:TableRow Visible="false">
+            <asp:TableCell></asp:TableCell>
+            <asp:TableCell>
+                <asp:TextBox ID="TextBox31" runat="server"></asp:TextBox></asp:TableCell>
+            <asp:TableCell>
+                <asp:TextBox ID="TextBox32" runat="server"></asp:TextBox></asp:TableCell>
+            </asp:TableRow>
+            <asp:TableRow Visible="false">
+            <asp:TableCell></asp:TableCell>
+            <asp:TableCell>
+                <asp:TextBox ID="TextBox33" runat="server"></asp:TextBox></asp:TableCell>
+            <asp:TableCell>
+                <asp:TextBox ID="TextBox34" runat="server"></asp:TextBox></asp:TableCell>
+            </asp:TableRow>
+            <asp:TableRow Visible="false">
+            <asp:TableCell></asp:TableCell>
+            <asp:TableCell>
+                <asp:TextBox ID="TextBox35" runat="server"></asp:TextBox></asp:TableCell>
+            <asp:TableCell>
+                <asp:TextBox ID="TextBox36" runat="server"></asp:TextBox></asp:TableCell>
+            </asp:TableRow>
+            <asp:TableRow Visible="false">
+            <asp:TableCell></asp:TableCell>
+            <asp:TableCell>
+                <asp:TextBox ID="TextBox37" runat="server"></asp:TextBox></asp:TableCell>
+            <asp:TableCell>
+                <asp:TextBox ID="TextBox38" runat="server"></asp:TextBox></asp:TableCell>
+            </asp:TableRow>
+            <asp:TableRow Visible="false">
+            <asp:TableCell></asp:TableCell>
+            <asp:TableCell>
+                <asp:TextBox ID="TextBox39" runat="server"></asp:TextBox></asp:TableCell>
+            <asp:TableCell>
+                <asp:TextBox ID="TextBox40" runat="server"></asp:TextBox></asp:TableCell>
+            </asp:TableRow>
+            </asp:Table>
+
+                         <asp:Button ID="AddNextInOut" runat="server" Text="Dodaj następne" 
+                onclick="AddNextInOut_Click" CausesValidation="false" />
+            </ContentTemplate>
+
+            </asp:UpdatePanel>
+            
+
+
+            <br />
+            <br />
+            
+                <p><strong>
+
+                <asp:Label ID="ObecnePary0" runat="server" Text="Jeżeli potrzebujesz dodać wiecęj par wejścia-wyjścia zaimportuj plik z danymi w formacie *.csv (nr_pary;wejście;wyjście)."></asp:Label>
+                <asp:Label ID="ObecnePary1" runat="server" Text="Obecne pary wejścia-wyjścia możesz pobrać klikając <i>tutaj</i>."></asp:Label>
+                    <asp:LinkButton ID="GetCSVPairs" runat="server" OnClick="GetCSVPairs_Click"><i>tutaj</i></asp:LinkButton>
+                
+                </strong></p>
+
+                <asp:AsyncFileUpload ID="AsyncFileUpload" runat="server" ThrobberID="UpdateProgress" Width="60px" onuploadedcomplete="AsyncFileUpload_UploadedComplete" />
+                <asp:UpdateProgress ID="UpdateProgress" runat="server" >
+                <ProgressTemplate>
+                    <img alt="circle" src="../App_Themes/Default/images/ajax-loader.gif" />
+                </ProgressTemplate>
+                </asp:UpdateProgress>
+                <asp:Label ID="UploadFileInfoLabel" runat="server" BackColor="Red" Visible="false" Text="Plik MUSI być z rozszerzeniem *.csv"></asp:Label> 
 
     <br />
     <br />
-
-    <h4>Dodaj nowe pary wej/wyj do istniejacych</h4>
-    <div style="width:500px;">
-        <table>
-            <tr>
-                <td>Nr</td>
-                <td><h4>Wejście</h4></td>
-                <td><h4>Wyjście</h4></td>
-            </tr>
-            <tr>
-                <td>1</td>
-                <td><asp:TextBox ID="Input1" Width="200px" Height="40px" TextMode="MultiLine" runat="server"></asp:TextBox></td>
-                <td><asp:TextBox ID="Output1" Width="200px" Height="40px" TextMode="MultiLine" runat="server"></asp:TextBox></td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td><asp:TextBox ID="Input2" Width="200px" Height="40px" TextMode="MultiLine" runat="server"></asp:TextBox></td>
-                <td><asp:TextBox ID="Output2" Width="200px" Height="40px" TextMode="MultiLine" runat="server"></asp:TextBox></td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td><asp:TextBox ID="Input3" Width="200px" Height="40px" TextMode="MultiLine" runat="server"></asp:TextBox></td>
-                <td><asp:TextBox ID="Output3" Width="200px" Height="40px" TextMode="MultiLine" runat="server"></asp:TextBox></td>
-            </tr>   
-        </table>
-Jeśli chcesz dodać wiecęj par WEJ/WYJ zaimportuj plik z danymi w formacie *.csv (nr_pary;wejście;wyjście)<br />
-<asp:AsyncFileUpload ID="AsyncFileUpload" runat="server" 
-        ThrobberID="UpdateProgress" Width="60px" 
-        onuploadedcomplete="AsyncFileUpload_UploadedComplete" />
-    <asp:UpdateProgress ID="UpdateProgress" runat="server" >
-    <ProgressTemplate>
-    <img alt="circle" src="../App_Themes/Default/images/ajax-loader.gif" />
-    </ProgressTemplate>
-    </asp:UpdateProgress>
-    <br />
-    <asp:Label ID="UploadFileInfoLabel" runat="server" BackColor="Red" Visible="false" Text="Plik MUSI być z rozszerzeniem *.csv"></asp:Label> 
-    </div>
-
     <br />
     <br />
-    
         <div style="width:500px;">
         <div style="float:left; margin-right:50px">
             <h4>Data otwarcia</h4>
@@ -145,10 +273,19 @@ Jeśli chcesz dodać wiecęj par WEJ/WYJ zaimportuj plik z danymi w formacie *.c
     <br />
     <br />
 
-    <div style="clear:both">
-        <asp:Button ID="EditProblemX" runat="server" Text="Edytuj problem" onclick="EditProblem_Click" />
-    </div>
     
-    <asp:Label ID="EditSuccessful" runat="server" Visible="false"></asp:Label>
+    <div style="clear:both">
+        <asp:Button ID="EditProblemX" runat="server" Text="Edytuj problem" onclick="EditProblemX_Click" OnClientClick="doSubmit(this); return false;" />
+    </div>
 
+    
+
+    <asp:Label ID="EditSuccessful" runat="server" Visible="false"></asp:Label>
+    
+    </asp:View>
+
+        <asp:View ID="Result" runat="server">
+        <h3>Pomyślnie dokonano zmian</h3>
+        </asp:View>
+    </asp:MultiView>
 </asp:Content>
