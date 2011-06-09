@@ -19,7 +19,7 @@
 <div id="header">
 	<div id="menu">
 		<ul id="main">
-			<li class="current_page_item"><a href="#">Homepage</a></li>
+			<li class="current_page_item"><a href="../default.aspx">Homepage</a></li>
 			<li><a href="#">Services</a></li>
 			<li><a href="#">About Us</a></li>
 			<li><a href="#">Contact Us</a></li>
@@ -37,8 +37,8 @@
 				<li>
 					<h2>Administracja</h2>
 					<ul>
-						<li><a href="#">Dodaj konto studenta</a></li>
-						<li><a href="#">Dodaj nowy problem do rozwiązania</a></li>
+						<li><a href="../Admin/AddStudentAccount.aspx">Dodaj konto studenta</a></li>
+						<li><a href="../Admin/EditProblem.aspx">Dodaj nowy problem do rozwiązania</a></li>
 					
 					</ul>
 				</li>
@@ -93,13 +93,13 @@
 				</li>
 				<li>
 					<h2>Tags</h2>
-					<p class="tag"><a href="#">dolor</a> <a href="#">ipsum</a> <a href="#">lorem</a> <a href="#">sit amet</a> <a href="#">dolor</a> <a href="#">ipsum</a> <a href="#">lorem</a> <a href="#">sit amet</a></p></li>
+					<p class="tag"></p></li>
 				<li>
 					<h2>Calendar</h2>
 					<div id="calendar_wrap">
 						<table summary="Calendar">
 							<caption>
-							May 2011
+							June 2011
 							</caption>
 							<thead>
 								<tr>
