@@ -12,13 +12,7 @@
 				<h2 class="title"><a href="#">Witamy na naszej stronie  </a></h2>
 				<p class="meta"><span class="date">February 19, 2010</span><span class="posted">Posted by <a href="#">Someone</a></span></p>
 				<div style="clear: both;">&nbsp;</div>
-				<div class="entry">
-                    <a href="Admin/AddNewProblem.aspx">Admin/AddNewProblem.aspx</a><br />
-<a href="Admin/AddStudentAccount.aspx">Admin/AddStudentAccount.aspx</a><br />
-<a href="User/LoginUser.aspx">User/LoginUser.aspx</a>
-					
-
-				</div>
+				<p> </p>
 			</div>
 			
 			

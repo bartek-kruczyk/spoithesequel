@@ -15,8 +15,6 @@
     <asp:MultiView ID="MultiView1" runat="server">
         <asp:View ID="View1" runat="server">
         <p>Załaduj kod źródłowy Twojego rozwiązania:</p>
-            <asp:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server">
-            </asp:ToolkitScriptManager>
                 <asp:AsyncFileUpload ID="AsyncFileUpload" runat="server" ThrobberID="UpdateProgress" Width="60px" onuploadedcomplete="AsyncFileUpload_UploadedComplete" />
                 <asp:UpdateProgress ID="UpdateProgress" runat="server" >
                 <ProgressTemplate>

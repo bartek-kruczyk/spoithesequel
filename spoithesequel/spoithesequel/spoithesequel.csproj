@@ -57,8 +57,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="About.aspx" />
+    <Content Include="Admin\AddGroup.aspx" />
     <Content Include="Admin\AddStudentAccount.aspx" />
+    <Content Include="Admin\AddStudentToGroup.aspx" />
     <Content Include="Admin\EditProblem.aspx" />
+    <Content Include="Admin\TasksList.aspx" />
     <Content Include="App_Themes\Default\css\default.css" />
     <Content Include="App_Themes\Default\images\ajax-loader.gif" />
     <Content Include="App_Themes\Default\css\style.css" />
@@ -76,6 +80,7 @@
     <Content Include="User\LoginUser.aspx" />
     <Content Include="User\Problem.aspx" />
     <Content Include="User\SolveProblem.aspx" />
+    <Content Include="User\TasksList.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -87,12 +92,33 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AddGroup.aspx.cs">
+      <DependentUpon>AddGroup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AddGroup.aspx.designer.cs">
+      <DependentUpon>AddGroup.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Admin\AddStudentAccount.aspx.cs">
       <DependentUpon>AddStudentAccount.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Admin\AddStudentAccount.aspx.designer.cs">
       <DependentUpon>AddStudentAccount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AddStudentToGroup.aspx.cs">
+      <DependentUpon>AddStudentToGroup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AddStudentToGroup.aspx.designer.cs">
+      <DependentUpon>AddStudentToGroup.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\Admin.Master.cs">
       <DependentUpon>Admin.Master</DependentUpon>
@@ -108,6 +134,14 @@
     <Compile Include="Admin\EditProblem.aspx.designer.cs">
       <DependentUpon>EditProblem.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Admin\TasksList.aspx.cs">
+      <DependentUpon>TasksList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\TasksList.aspx.designer.cs">
+      <DependentUpon>TasksList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Data\StudentInGroup.cs" />
     <Compile Include="DataBase\DataClasses1.designer.cs">
       <DependentUpon>DataClasses1.dbml</DependentUpon>
       <DesignTime>True</DesignTime>
@@ -150,9 +184,7 @@
       <DependentUpon>User.Master</DependentUpon>
     </Compile>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="Admin\Admin.Master" />
   </ItemGroup>

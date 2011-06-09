@@ -10,42 +10,42 @@
 namespace spoithesequel.Admin {
     
     
-    public partial class Admin {
+    public partial class AddGroup {
         
         /// <summary>
-        /// head2 control.
+        /// GroupNameTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder head2;
+        protected global::System.Web.UI.WebControls.TextBox GroupNameTextBox;
         
         /// <summary>
-        /// form1 control.
+        /// AddGroupButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.WebControls.Button AddGroupButton;
         
         /// <summary>
-        /// ToolkitScriptManager control.
+        /// GroupNameRepeater control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::AjaxControlToolkit.ToolkitScriptManager ToolkitScriptManager;
+        protected global::System.Web.UI.WebControls.Repeater GroupNameRepeater;
         
         /// <summary>
-        /// ContentPlaceHolder2 control.
+        /// SqlDataSource control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPlaceHolder2;
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource;
     }
 }

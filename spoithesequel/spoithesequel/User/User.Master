@@ -19,7 +19,7 @@
 		<ul id="main">
 			<li class="current_page_item"><a href="../default.aspx">Homepage</a></li>
 			
-			<li><a href="#">Contact Us</a></li>
+			<li><a href="../About.aspx">Contact Us</a></li>
 		</ul>
 	</div>
 	<div id="logo">
@@ -41,13 +41,11 @@
 					</ul>
 				</li>
 				<li>
-					<h2>Zadania</h2>
-					<ul>
-					<li><a href="#">Przykłady</a></li>
-                    <li><a href="#">Łatwe</a></li>
-                    <li><a href="#">Średnie</a></li>
-                    <li><a href="#">Trudne</a></li>
-					</ul>
+					<h2>Zadania</h2>    <ul>
+                            <li><a href="../User/TasksList.aspx">Podglad</a></li>
+                            <li><a href="../User/SolveProblem.aspx">Rozwiąż</a></li>
+                            <li><a href="#">Wyniki</a></li>
+                        </ul>
 				</li>
 				<li>
 					<h2>Ranking</h2>
